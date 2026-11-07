@@ -37,4 +37,4 @@ Proses onboarding karyawan baru sering mengandalkan PDF panduan yang tebal atau 
 **11. Potensi Pengembangan Lanjutan:**
 NeoBuddy dapat diintegrasikan ke Slack atau Microsoft Teams, ditambah daily check-in proaktif untuk karyawan baru ("Bagaimana hari pertamamu?"), basis pengetahuan yang lebih besar dengan data perusahaan nyata, dukungan bilingual (Indonesia dan Inggris), serta evaluasi otomatis dengan kumpulan skenario uji.
 
-**12. Link Project:** https://github.com/USERNAME/neobuddy-onboarding-assistant (ganti USERNAME; pastikan repo public)
+**12. Link Project:** https://github.com/Magentakey/neobuddy-onboarding-assistant 

@@ -90,10 +90,11 @@ Screenshot: `iterasi3-4-resep.png`, `iterasi3-7-diluar_topik.png`, `iterasi3-8-e
 - Fitur baru: draf pesan eskalasi ke HR/IT untuk pertanyaan yang tidak ada di dokumen.
 
 **Hasil pengujian** (ISI SETELAH TES, tulis apa adanya):
-- #9 (naik gaji): [ISI]
-- #10 (klaim ambigu): [ISI]
-- #11 (bonus, ulang): [ISI]
-- #12 (resep, ulang): [ISI]
-- Apakah ada regresi dibanding Iterasi 3? [ISI]
+- #9 (naik gaji): NeoBuddy menyatakan informasi belum ada di panduan, memberi kontak HR (hr@majujaya.example / ext. 101), dan menyertakan draf pesan siap kirim. Tidak ada fakta karangan.
+- #10 (klaim ambigu): NeoBuddy bertanya balik apakah yang dimaksud klaim kesehatan atau klaim operasional, bukan langsung menebak. Catatan: ia menambahkan opsi "gigi" yang tidak tertulis di dokumen.
+- #11 (bonus, ulang): konsisten dengan Iterasi 2 (tidak ada di panduan, kontak HR, sumber), ditambah draf pesan eskalasi.
+- #12 (resep, ulang): tetap menolak dan hanya menawarkan topik onboarding tanpa rujukan eksternal.
+- Regresi dibanding Iterasi 3: tidak ditemukan pada skenario yang diulang.
+- Keterbatasan: pada pertanyaan klarifikasi, NeoBuddy masih bisa menambahkan opsi kecil yang tidak ada di dokumen.
 
 Screenshot: `iterasi4-9-...png`, `iterasi4-10-...png`, `iterasi4-11-...png`, `iterasi4-12-...png`

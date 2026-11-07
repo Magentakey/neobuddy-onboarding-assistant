@@ -16,6 +16,7 @@ Onboarding sering mengandalkan PDF panduan yang tebal atau bertanya langsung ke 
 
 ## Alur Sistem
 **Input:** pertanyaan karyawan baru (chat di Bob). **Proses:** identifikasi topik, baca `knowledge/`, verifikasi fakta, cek kejelasan, susun jawaban sesuai format. **Output:** jawaban berformat dengan sumber file, atau eskalasi ke HR/IT beserta draf pesan jika informasi tidak ada.
+![Alur NeoBuddy](docs/screenshots/workflow-diagram.png)
 
 ## Struktur Repo
 ```
@@ -62,7 +63,7 @@ Seluruh iterasi didokumentasikan di [`docs/prompt-iterasi.md`](docs/prompt-itera
 | 1: Prompt minimal | Satu kalimat peran | Jawaban generik, tidak konsisten merujuk dokumen, menyebut undang-undang dari pengetahuan umum |
 | 2: 5 layer + guardrails | Persona, konteks, format, 8 aturan | Merujuk dokumen dan kontak benar; masih ada rekomendasi eksternal dan klaim berlebih |
 | 3: Penutupan celah | Aturan 9 dan 10 | Rekomendasi eksternal hilang; klaim berlebih berkurang |
-| 4: Chaining + few-shot + eskalasi | Dua file rules baru | [ISI SETELAH TES] |
+| 4: Chaining + few-shot + eskalasi | Dua file rules baru | Eskalasi dengan draf pesan ke HR berjalan, pertanyaan ambigu dijawab dengan klarifikasi, tidak ada regresi pada guardrail; masih ada opsi kecil di luar dokumen pada klarifikasi |
 
 ### Contoh sebelum dan sesudah
 | Pertanyaan | Iterasi 1 | Iterasi 2 |
