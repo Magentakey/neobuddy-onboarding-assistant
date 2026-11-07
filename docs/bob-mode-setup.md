@@ -37,3 +37,9 @@ FORMAT JAWABAN:
 Mode tidak diubah. Yang ditambahkan adalah aturan 9 dan 10 di `01-guardrails.md`:
 - Aturan 9: tidak menambah klaim perusahaan yang tidak ada di dokumen saat memberi dukungan emosional.
 - Aturan 10: tidak merekomendasikan situs/aplikasi eksternal untuk pertanyaan di luar topik.
+
+## Versi 4 (Iterasi 4: layer baru lewat file rules)
+Mode tidak diubah. Ditambahkan dua file di `.bob/rules-neobuddy/`:
+- `02-workflow-chaining.md` (alur kerja bertahap + eskalasi)
+- `03-few-shot.md` (contoh jawaban)
+Rules dimuat otomatis di setiap percakapan, jadi cukup mulai New task.

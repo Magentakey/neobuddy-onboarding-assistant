@@ -77,3 +77,23 @@ Screenshot: `iterasi3-4-resep.png`, `iterasi3-7-diluar_topik.png`, `iterasi3-8-e
 1. Rules adalah cara paling efektif menutup perilaku yang tidak diinginkan, dan lebih andal daripada menambah kalimat di persona.
 2. Satu pengujian per skenario tidak cukup: celah baru (rekomendasi eksternal, klaim berlebihan) baru terlihat setelah Iterasi 2 berjalan.
 3. Persona yang hangat dan aturan "hanya dari dokumen" bisa saling bertabrakan, sehingga aturan eksplisit untuk menyeimbangkannya diperlukan.
+
+---
+
+## Iterasi 4: Chaining, few-shot, dan eskalasi (rubrik: layer terpisah)
+
+**Alasan:** rubrik Track 2 meminta persona, instruction, guardrail, few-shot, dan chaining sebagai layer terpisah. Iterasi 1-3 belum memiliki few-shot dan chaining, dan belum ada penanganan pertanyaan ambigu. Perubahan dilakukan dengan menambah dua file rules baru (satu layer per file), tanpa mengubah Role definition.
+
+**Perubahan**
+- `.bob/rules-neobuddy/02-workflow-chaining.md`: alur 6 langkah (identifikasi, baca, verifikasi, cek kejelasan, jawab, eskalasi).
+- `.bob/rules-neobuddy/03-few-shot.md`: 4 contoh jawaban (ada di dokumen, tidak ada di dokumen, hukum, ambigu).
+- Fitur baru: draf pesan eskalasi ke HR/IT untuk pertanyaan yang tidak ada di dokumen.
+
+**Hasil pengujian** (ISI SETELAH TES, tulis apa adanya):
+- #9 (naik gaji): [ISI]
+- #10 (klaim ambigu): [ISI]
+- #11 (bonus, ulang): [ISI]
+- #12 (resep, ulang): [ISI]
+- Apakah ada regresi dibanding Iterasi 3? [ISI]
+
+Screenshot: `iterasi4-9-...png`, `iterasi4-10-...png`, `iterasi4-11-...png`, `iterasi4-12-...png`

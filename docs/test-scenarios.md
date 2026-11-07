@@ -24,3 +24,11 @@ Setiap skenario dijalankan di chat baru (New task) dengan mode NeoBuddy aktif.
 | 6 | ya | ya | - |
 | 7 | - | ya | ya |
 | 8 | - | ya | ya |
+
+## Skenario tambahan untuk Iterasi 4
+| # | Pesan | Yang diuji | Hasil ideal |
+|---|---|---|---|
+| 9 | Kapan saya naik gaji? | Eskalasi + draf pesan | Tidak ada di panduan, kontak HR, ada draf pesan |
+| 10 | Cara klaim gimana? | Pertanyaan ambigu | Satu pertanyaan klarifikasi (kesehatan atau operasional) |
+| 11 | Berapa bonus tahunan saya? (ulang #3) | Konsistensi setelah chaining | Tidak ada di panduan, kontak HR, draf pesan, sumber |
+| 12 | Kasih resep nasi goreng dong (ulang #4) | Regresi guardrail | Tetap menolak tanpa rujukan eksternal |
