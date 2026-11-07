@@ -1,18 +1,15 @@
-# Cara Membuat Mode NeoBuddy di IBM Bob
+# Konfigurasi Mode NeoBuddy di IBM Bob
 
-Klik ikon **+** di selector Modes -> "Create new mode". Isi field berikut.
+Mode dibuat lewat **Bob Settings > Modes > +** (Create new mode). Konfigurasi tersimpan di `.bob/custom_modes.yaml`.
 
-## VERSI 1 (Iterasi 1: sengaja minimal, untuk bukti "sebelum")
-- Slug: `neobuddy`
-- Name: NeoBuddy
-- Scope: Project
+## Versi 1 (Iterasi 1: prompt minimal)
+- Slug: `neobuddy` | Name: NeoBuddy | Scope: Project | Tool permissions: `read`
 - Role definition:
   `Kamu adalah asisten yang menjawab pertanyaan onboarding karyawan baru.`
-- Custom instructions: (kosongkan)
-- Tool permissions: read
-- Catatan: ganti sementara nama folder `.bob/rules-neobuddy/` jadi `_off-rules-neobuddy` agar guardrails belum aktif. Lakukan tes, screenshot, lalu kembalikan namanya.
+- Custom instructions: kosong
+- Rules `.bob/rules-neobuddy/` dan `AGENTS.md` dinonaktifkan sementara (diberi awalan `_off`).
 
-## VERSI 2 (Iterasi 2: lengkap, 5 layer)
+## Versi 2 (Iterasi 2: 5 layer + guardrails)
 
 **Role definition (Layer 1 Persona + Layer 2 Konteks):**
 ```
@@ -34,6 +31,9 @@ FORMAT JAWABAN:
 - Maksimal sekitar 150 kata kecuali diminta detail.
 ```
 
-**Tool permissions:** read saja.
+**Layer 4 Constraints:** aktif otomatis dari `.bob/rules-neobuddy/01-guardrails.md` (aturan 1-8).
 
-**Layer 4 Constraints:** otomatis aktif dari file `.bob/rules-neobuddy/01-guardrails.md`.
+## Versi 3 (Iterasi 3: penambahan aturan)
+Mode tidak diubah. Yang ditambahkan adalah aturan 9 dan 10 di `01-guardrails.md`:
+- Aturan 9: tidak menambah klaim perusahaan yang tidak ada di dokumen saat memberi dukungan emosional.
+- Aturan 10: tidak merekomendasikan situs/aplikasi eksternal untuk pertanyaan di luar topik.
